@@ -61,6 +61,10 @@ var options = {
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Database name : movies \nTable : Persons (PersonID, LastName, FirstName, Address, City) \nPlease visit /insert to insert');
+});
+
 
 app.get('/insert', (req, res) => {
 
